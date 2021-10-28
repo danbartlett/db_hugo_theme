@@ -168,10 +168,13 @@ h1.welcome {
     max-width: auto;
   }
   h1.article-title {
-    font-size: 1.5em;
+    font-size: 1.8em !important;
   }
   html {
     font-size: 16px;
+  }
+  ul {
+    padding-left: 20px;
   }
 }
 
