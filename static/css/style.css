@@ -262,3 +262,8 @@ iframe {
   vertical-align: middle;
   display: block;
 }
+
+/* List page */
+h3 {
+  line-height: 1.2;
+}
