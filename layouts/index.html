@@ -1,23 +1,34 @@
 {{ define "main" }}
 <div class="container homepage">
-  <!-- <h1 class="welcome">Hi, my name is Dan<span>. 🦉</span></h1> -->
   <h1 class="welcome">Hello.<span></span></h1>
   <p class="tagline">My name is <span>Dan Bartlett</span>. I am a technologist, writer and contemplative living in Bristol, UK. My life and writings spill out in three directions:</p>
   <ul>
     <li>
       <a href="/posts">Practical</a>
       <p class="section-description">Fitness, psychology, productivity & politics.</p>
-      <p class="small-caps latest">Latest: <a href='#'>What bike? Wattbike</a></p> 
+      <p class="small-caps latest">Latest:
+        {{ range first 1 (where .Site.RegularPages.ByDate.Reverse "Section" "posts") }}
+          <a href="{{.RelPermalink}}">{{.Title}}</a>
+        {{end}}
+      </p>
     </li>
     <li>
       <a href="/technical">Technical</a>
       <p class="section-description">Software, coding, crypto & leadership.</p>
-      <p class="small-caps latest">Latest: <a href='#'>The altair fork: what it means for you</a></p>
+      <p class="small-caps latest">Latest:
+        {{ range first 1 (where .Site.RegularPages.ByDate.Reverse "Section" "technical") }}
+          <a href="{{.RelPermalink}}">{{.Title}}</a>
+        {{end}}
+      </p>
     </li>
     <li>
       <a href="/mystical">Mystical</a>
       <p class="section-description">Contemplation, awakening and the search for meaning.</p>
-      <p class="small-caps latest">Latest: <a href='#'>New article about meditation</a></p>
+      <p class="small-caps latest">Latest:
+        {{ range first 1 (where .Site.RegularPages.ByDate.Reverse "Section" "mystical") }}
+          <a href="{{.RelPermalink}}">{{.Title}}</a>
+        {{end}}
+      </p>
     </li>
   </ul>
   <p class="tagline">You can also get in <a href="/contact">contact</a>, learn more <a href="/about">about me</a> or check out <a href="/resume">my resume</a>.</p>
