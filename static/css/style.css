@@ -81,8 +81,6 @@ header {
 .homepage ul {
   font-size: 1.2em;
   letter-spacing: -1px;
-  margin-left: -40px;
-  /*font-family: var(--header-font);*/
 }
 .homepage ul a {
   /*font-style: italic;*/
