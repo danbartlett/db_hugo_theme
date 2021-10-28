@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="container">
+
+  <h1 class="article-title">{{ .Title }}</h1>
+
+  <div class="meta">
+    Filed under <a href="/{{ .Section }}">{{ .Section }}</a> &bull;
+    {{ .Date.Format "Jan '06" }} &bull;
+    Tags: {{ range (.GetTerms "tags") }}
+      <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+    {{ end }}
+  </div>
+
+  <article>
+    {{ .Content }}
+  </article>
+  
+  <aside id="related-pages">
+    {{ $related := .Site.RegularPages.Related . | first 5 }}
+    {{ with $related }}
+    <h2>What to read next</h2>
+    <ul>
+      {{ range . }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </aside>
+</div>
+{{ end }}

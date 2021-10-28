@@ -1,0 +1,264 @@
+:root {
+  /*--body-font: 'Alegreya', serif;*/
+  /*--body-font: 'Source Serif Pro', serif;*/
+  --body-font: 'Lora', serif;
+  /*--body-font: 'Vollkorn', serif;*/
+  /*--body-font: 'Charter', serif;*/
+  --header-font: 'Inter', sans-serif;
+  --font-color: #495057;
+  --header-color: #343a40;
+  --link-color: #da7959;
+}
+
+html {
+	font-size: 19px; /* Use px here, and use rem to scale everything else accordingly */
+	font-family: var(--body-font);
+	color: var(--font-color);
+	line-height: 1.6;
+	text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3 {
+	font-family: var(--header-font);
+	font-weight: 700;
+	color: var(--header-color);
+}
+/*h2, h3 {
+	margin-top: 1.5em;
+	margin-bottom: 0em;
+	letter-spacing: -1px;
+}*/
+h1 {
+  letter-spacing: -2px;
+  line-height: 1;
+}
+h2 {
+  font-variant-caps: all-small-caps;
+  margin-bottom: -0.5em;
+  font-size: 1.4em;
+  margin-top: 1.2em;
+}
+
+h3 {
+  font-variant-caps: all-small-caps;
+  margin-bottom: -0.5em;
+  font-size: 1.4em;
+  color: #999;
+  margin-top: 1.2em;
+}
+
+/* Logo */
+.logo {
+	width: 50px;
+	/*margin-bottom: 1em;*/
+}
+.logo-smaller {
+	width: 110px;
+}
+.logo-container {
+	width: 100%;
+	float: left;
+	text-align: left;
+	margin-top: 2em;
+  opacity: 0.8;
+	/*margin-bottom: 1em;*/
+}
+
+header {
+	margin-top: 3em;
+	float: left;
+	width: 100%;
+}
+
+.small-caps {
+  font-variant-caps: all-small-caps;
+  font-family: var(--header-font);
+}
+
+.homepage ul {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-left: -40px;
+  /*font-family: var(--header-font);*/
+}
+.homepage ul a {
+  /*font-style: italic;*/
+  /*text-decoration: none;*/  
+  color: var(--link-color);
+}
+.homepage li {
+  /*margin: 0.25em 0;*/
+  list-style: disc;
+
+}
+.homepage li p.section-description {
+  font-style: italic;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+.homepage li p.section-description {
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+.homepage li p.latest {
+  margin-top: -15px;
+  /*margin-bottom: 10px;*/
+}
+
+/* Hello. */
+h1.welcome {
+	margin-top: 1.5em;
+	font-size: 3em;
+	font-weight: 700;
+	letter-spacing: -2px;
+	margin-bottom: 15px;
+}
+.tagline {
+	font-size:1.2em;
+	font-weight: 400;
+	text-align: left;
+	/*hyphens: auto;*/
+	line-height: 1.5;
+	letter-spacing: -1px;
+	margin-bottom: 0;
+	/*font-style: italic;*/
+	margin-top:0
+}
+
+.bottom-menu {
+	opacity: 0.6;
+	font-size: 1.2em;
+	width: 100%;
+	float: left;
+	text-align: center;
+	margin-top: 2em;
+}
+.bottom-menu a {
+	letter-spacing: 2px;
+	color: var(--font-color);
+	margin: 0 8px;
+}
+
+.container {
+	width: 60%;
+	max-width: 650px;
+	margin: 0 auto;
+}
+
+article {
+  /* needs to be set to stop pre, code etc overflowing container div */
+  width: 100%; 
+}
+
+pre, code {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+aside#related-pages {
+  float: left;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+a {
+	color: #222;
+	text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+a:hover {
+  color: var(--link-color);
+  text-decoration-thickness: 1px;
+}
+
+.orange {
+	color: var(--link-color);
+}
+
+blockquote {
+	font-size: 0.9em;
+}
+
+.breadcrumbs {
+	font-size: 1.1em;
+	font-family: var(--header-font);
+	/*font-weight: bold;*/
+	/*font-style: italic;*/
+	font-weight: 400;
+	float: left;
+	width: 100%;
+	/*letter-spacing: 1px;*/
+	font-variant-caps: all-small-caps;
+	padding: .3em 0 .6em 0;
+	/*border-bottom: 1px solid #CCC;*/
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  /*border-bottom: 2px solid #000;*/
+}
+
+.meta {
+  /*text-align: center;*/
+  font-family: var(--header-font);
+  font-variant-caps: all-small-caps;
+  opacity: 0.6;
+  float: left;
+  width: 100%;
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+h1.article-title {
+	font-size: 2em;
+  line-height: 1.1;
+	margin: 0em 0 0 0;
+	float: left;
+	width: 100%;
+	text-align: left;
+}
+
+article {
+  margin-top: 1em;
+  float: left;
+}
+
+aside {
+  float: left;
+  width: 100%;
+}
+
+/* For img shortcode */
+.img-container {
+  text-align: center;
+  padding: 2em 0;
+}
+
+img {
+  max-width: 100%;
+}
+figure {
+  text-align: center;
+  margin: 2em 0;
+}
+
+figure figcaption {
+  font-size: 0.8em;
+  opacity: 0.8;
+}
+
+/* Reduce code size in snippets */
+code {
+  font-size: 0.8em;
+}
+
+/* Lots of space around rules */
+hr {
+  margin: 4em 0;
+  color: #EEE;
+}
+
+/* Centre iframe content (Strava, YouTube, Instagram etc) */
+iframe {
+  margin: 2em  auto !important;
+  vertical-align: middle;
+  display: block;
+}
