@@ -4,33 +4,32 @@
   <p class="tagline">My name is <span>Dan Bartlett</span>. I am a technologist, writer and contemplative living in Bristol, UK. My life and writings spill out in three directions:</p>
   <ul>
     <li>
-      <a href="/posts">Practical</a>
-      <p class="section-description">Fitness, psychology, productivity & politics.</p>
-      <p class="small-caps latest">Latest:
+      <p class="section-description"><a href="/posts">Practical</a>:
+      fitness, psychology, productivity & politics.</p>
+      <p class="latest">
         {{ range first 1 (where .Site.RegularPages.ByDate.Reverse "Section" "posts") }}
-          <a href="{{.RelPermalink}}">{{.Title}}</a>
+          <a href="{{.RelPermalink}}">{{.Title}}</a> <em>({{ .Date.Format "1 Jan" }})</em>
         {{end}}
       </p>
     </li>
     <li>
-      <a href="/technical">Technical</a>
-      <p class="section-description">Software, coding, crypto & leadership.</p>
-      <p class="small-caps latest">Latest:
+      <p class="section-description"><a href="/technical">Technical</a>:
+      software, coding & leadership.</p>
+      <p class="latest">
         {{ range first 1 (where .Site.RegularPages.ByDate.Reverse "Section" "technical") }}
-          <a href="{{.RelPermalink}}">{{.Title}}</a>
+          <a href="{{.RelPermalink}}">{{.Title}}</a> <em>({{ .Date.Format "1 Jan" }})</em>
         {{end}}
       </p>
     </li>
     <li>
-      <a href="/mystical">Mystical</a>
-      <p class="section-description">Contemplation, awakening and the search for meaning.</p>
-      <p class="small-caps latest">Latest:
+      <p class="section-description"><a href="/mystical">Mystical</a>: contemplation, awakening & meaning.</p>
+      <p class="latest">
         {{ range first 1 (where .Site.RegularPages.ByDate.Reverse "Section" "mystical") }}
-          <a href="{{.RelPermalink}}">{{.Title}}</a>
+          <a href="{{.RelPermalink}}">{{.Title}}</a> <em>({{ .Date.Format "1 Jan" }})</em>
         {{end}}
       </p>
     </li>
   </ul>
-  <p class="tagline">You can also get in <a href="/contact">contact</a>, learn more <a href="/about">about me</a> or check out <a href="/resume">my resume</a>.</p>
+  <p class="tagline">You can also get in <a href="/contact">contact</a>, subscribe by <a href="/index.xml">RSS</a>, learn more <a href="/about">about me</a> or check out <a href="/resume">my resume</a>.</p>
 </div>
 {{ end }}
