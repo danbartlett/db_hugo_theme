@@ -5,9 +5,11 @@
 
   <div class="meta">
     Written {{ .Date.Format "Jan '06" }}.
-    Filed under <a href="/{{ .Section }}">{{ .Section }}</a> and tagged: {{ range (.GetTerms "tags") }}
-      <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-    {{ end }}
+    Filed under <a href="/{{ .Section }}">{{ .Section }}</a> and tagged:
+    {{ range $i, $e := .Params.tags -}}
+      {{- if $i -}}, {{ end -}}
+      <a href='{{ "/tag/" | relLangURL }}{{ . | urlize }}'>{{ $e | humanize }}</a>
+    {{- end -}} 
   </div>
 
   <article>
