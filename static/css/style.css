@@ -89,21 +89,19 @@ header {
 
 }
 .homepage li p.section-description {
-  /*font-style: italic;*/
   margin-top: -5px;
   margin-bottom: 15px;
-}
-.homepage li p.section-description a {
-  /*color: black;*/
-  text-decoration: underline;
-  /*color: var(--font-color);*/
 }
 .homepage li p.latest {
   margin-top: -15px;
   font-size: 0.9rem;
+  font-style: italic;
   font-family: var(--body-font);
   letter-spacing: 0px;
-  /*margin-bottom: 10px;*/
+  /*opacity: 0.7;*/
+}
+.homepage li p.latest a {
+  text-decoration: none;
 }
 
 /* Hello. */
