@@ -83,11 +83,6 @@ header {
   font-size: 1.2em;
   letter-spacing: -1px;
 }
-.homepage ul a {
-  /*font-style: italic;*/
-  /*text-decoration: none;*/  
-  color: var(--link-color);
-}
 .homepage li {
   /*margin: 0.25em 0;*/
   list-style: disc;
@@ -101,7 +96,7 @@ header {
 .homepage li p.section-description a {
   /*color: black;*/
   text-decoration: underline;
-  color: var(--font-color);
+  /*color: var(--font-color);*/
 }
 .homepage li p.latest {
   margin-top: -15px;
@@ -198,16 +193,10 @@ aside#related-pages {
 
 a {
 	color: #222;
-	text-decoration: underline;
-  text-decoration-thickness: 1px;
 }
 a:hover {
   color: var(--link-color);
-  text-decoration-thickness: 1px;
-}
-
-.orange {
-	color: var(--link-color);
+  filter: brightness(0.85);
 }
 
 blockquote {
