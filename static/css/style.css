@@ -169,6 +169,9 @@ h1.welcome {
   h1.article-title {
     font-size: 1.8em !important;
   }
+  h1.welcome {
+    margin-top: 0.5em;
+  }
   html {
     font-size: 16px;
   }
