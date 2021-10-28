@@ -1,0 +1,13 @@
+{{ define "main" }}
+<!-- this is the default template for pages in root dir without dates -->
+<!-- i have no idea why, i just chanced on it when experimenting with types -->
+
+<div class="container">
+
+  <h1 class="article-title">{{ .Title }}</h1>
+
+  <article>
+    {{ .Content }}
+  </article>
+</div>
+{{ end }}
