@@ -84,13 +84,16 @@ header {
   letter-spacing: -1px;
 }
 .homepage li {
-  /*margin: 0.25em 0;*/
   list-style: disc;
-
 }
 .homepage li p.section-description {
   margin-top: -5px;
   margin-bottom: 15px;
+}
+.homepage a {
+  text-decoration-color: var(--link-color);
+  text-underline-offset: 2px;
+  text-decoration-thickness: 3px;
 }
 .homepage li p.latest {
   margin-top: -15px;
@@ -98,7 +101,6 @@ header {
   font-style: italic;
   font-family: var(--body-font);
   letter-spacing: 0px;
-  /*opacity: 0.7;*/
 }
 .homepage li p.latest a {
   text-decoration: none;
