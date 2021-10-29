@@ -51,21 +51,35 @@ h3 {
   margin-top: 1.4em;
 }
 
+/* Links */
+
+a {
+  color: var(--body-color);
+  text-underline-offset: 2px;
+}
+a:hover {
+  color: var(--body-color);
+  
+  text-decoration-color: var(--link-color);
+  text-decoration-thickness: 2px;
+  transition: all .3s ease-in;
+}
+
+blockquote {
+  font-size: 0.9em;
+}
+
 /* Logo */
-.logo {
-	width: 50px;
-	/*margin-bottom: 1em;*/
-}
-.logo-smaller {
-	width: 110px;
-}
+
 .logo-container {
 	width: 100%;
 	float: left;
 	text-align: left;
 	margin-top: 2em;
   opacity: 0.8;
-	/*margin-bottom: 1em;*/
+}
+.logo-container a:hover {
+  color: var(--link-color);
 }
 
 header {
@@ -92,6 +106,12 @@ header {
 }
 .homepage a {
   text-decoration-color: var(--link-color);
+  text-underline-offset: 2px;
+  text-decoration-thickness: 3px;
+}
+.homepage a:hover {
+  text-decoration-color: var(--link-color);
+  filter: brightness(0.70);
   text-underline-offset: 2px;
   text-decoration-thickness: 3px;
 }
@@ -191,18 +211,6 @@ aside#related-pages {
   margin-bottom: 2em;
 }
 
-a {
-	color: #222;
-}
-a:hover {
-  color: var(--link-color);
-  filter: brightness(0.85);
-}
-
-blockquote {
-	font-size: 0.9em;
-}
-
 .breadcrumbs {
 	font-size: 1.1em;
 	font-family: var(--header-font);
@@ -224,10 +232,11 @@ blockquote {
   /*text-align: center;*/
   font-family: var(--header-font);
   /*font-style: italic;*/
-  font-variant-caps: all-small-caps;
+  letter-spacing: -1px;
+  /*font-variant-caps: all-small-caps;*/
   opacity: 0.8;
   line-height: 1;
-  font-size: 1em;
+  font-size: 0.8em;
   float: left;
   width: 100%;
   /*font-size: 1em;*/

@@ -4,8 +4,8 @@
   <h1 class="article-title">{{ .Title }}</h1>
 
   <div class="meta">
-    Written {{ .Date.Format "Jan '06" }}.
-    Filed under <a href="/{{ .Section }}">{{ .Section }}</a> and tagged:
+    {{ .Date.Format "1 Jan '06" }} &bull; 
+    Filed under <a href="/{{ .Section }}">{{ .Section }}</a> &bull; Tagged:
     {{ range $i, $e := .Params.tags -}}
       {{- if $i -}}, {{ end -}}
       <a href='{{ "/tag/" | relLangURL }}{{ . | urlize }}'>{{ $e | humanize }}</a>
